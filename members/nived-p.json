@@ -1,0 +1,16 @@
+{
+  "handle": "nived-p",
+  "name": "Nived P.",
+  "github": "nivedp",
+  "site": "https://example.com/nived",
+  "city": "Alappuzha",
+  "district": "Alappuzha",
+  "country": "India",
+  "tags": ["creative-code", "webgl", "webdev", "art"],
+  "bio": "Drawing with shaders, browsers, and monsoon light.",
+  "joined": "2026-03-02",
+  "projects": [
+    {"name": "Mazha", "url": "https://example.com/nived/mazha", "description": "Generative studies of rain and water."}
+  ],
+  "stats": {"contributions": 299, "mergedPRs": 19, "projects": 12, "posts": 10, "streak": 14}
+}

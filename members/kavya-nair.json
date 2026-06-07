@@ -1,0 +1,16 @@
+{
+  "handle": "kavya-nair",
+  "name": "Kavya Nair",
+  "github": "kavyan",
+  "site": "https://example.com/kavya",
+  "city": "Bengaluru",
+  "district": "Palakkad",
+  "country": "India",
+  "tags": ["diaspora", "data", "opensource", "python"],
+  "bio": "Building open data infrastructure, rooted in Palakkad.",
+  "joined": "2026-02-14",
+  "projects": [
+    {"name": "Canopy", "url": "https://example.com/kavya/canopy", "description": "Composable pipelines for civic datasets."}
+  ],
+  "stats": {"contributions": 543, "mergedPRs": 36, "projects": 8, "posts": 15, "streak": 27}
+}

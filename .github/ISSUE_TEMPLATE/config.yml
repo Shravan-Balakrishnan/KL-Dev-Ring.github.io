@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Product proposal
+    url: https://github.com/KLDevRing/ring/discussions
+    about: Discuss substantial product, score, schema, or governance changes.

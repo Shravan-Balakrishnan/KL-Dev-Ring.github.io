@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b0c">
+  <meta name="description" content="KL Dev-Ring is Kerala's open-source builder network. Ranked by what you ship. Connected by what you build.">
+  <title>KL Dev-Ring — Kerala's Builder Network</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="boot" id="boot" role="dialog" aria-label="Initializing KL Dev-Ring">
+    <button class="boot-skip" id="skipBoot">Skip intro ↗</button>
+    <div class="boot-radar" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="boot-copy">
+      <span class="eyebrow">KL / NETWORK BOOT</span>
+      <h1 id="bootLine">Initializing Kerala Builder Network...</h1>
+      <div class="boot-track"><span id="bootProgress"></span></div>
+      <div class="boot-metrics" id="bootMetrics"></div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="KL Dev-Ring home">
+      <svg viewBox="0 0 46 46" aria-hidden="true">
+        <path d="M23 2 42 12v22L23 44 4 34V12Z"/>
+        <path d="m12 27 7-11v14m0-7 9-7m-9 7 9 7m-1-14h7m-7 14h7"/>
+      </svg>
+      <span><b>KL</b> DEV-RING</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <button class="nav-link active" data-view="ring">The Ring</button>
+      <button class="nav-link" data-view="universe">Universe</button>
+      <button class="nav-link" data-view="districts">Kerala</button>
+      <button class="nav-link" data-view="trails">Trails</button>
+    </nav>
+    <a class="join-button" href="https://github.com/KLDevRing/ring/fork" target="_blank" rel="noreferrer">
+      <span>Join the ring</span><i>↗</i>
+    </a>
+  </header>
+
+  <main>
+    <section class="ring-stage" id="ringView" aria-label="Browse the KL Dev-Ring">
+      <div class="ring-sticky">
+        <div class="ring-intro">
+          <div class="eyebrow"><span class="live-dot"></span> KERALA BUILDER WEBRING / LIVE</div>
+          <h1>Scroll the ring.<br><em>Meet a builder.</em></h1>
+          <p>Every turn takes you to another personal corner of Kerala's builder internet.</p>
+        </div>
+        <div class="ring-orbit" id="ringOrbit">
+          <div class="ring-track" id="ringTrack"></div>
+          <div class="ring-focus" aria-hidden="true"></div>
+        </div>
+        <div class="ring-console">
+          <button class="ring-step ring-prev" id="ringPrev">
+            <span>PREVIOUS</span><b id="ringPrevName">Builder</b>
+          </button>
+          <div class="ring-position">
+            <span id="ringCounter">01 / 01</span>
+            <div class="ring-progress"><i id="ringProgress"></i></div>
+            <small>SCROLL / SWIPE / ARROW KEYS</small>
+          </div>
+          <button class="ring-random" id="ringRandom" aria-label="Visit a random builder">RANDOM SIGNAL</button>
+          <button class="ring-step ring-next" id="ringNext">
+            <span>NEXT</span><b id="ringNextName">Builder</b>
+          </button>
+        </div>
+        <div class="ring-scroll-cue"><span></span> KEEP SCROLLING TO EXPLORE THE UNIVERSE</div>
+      </div>
+    </section>
+
+    <section class="hero universe-intro">
+      <div class="hero-copy">
+        <div class="eyebrow">01 / NETWORK VIEW</div>
+        <h1>The ring is also<br>a living <em>universe.</em></h1>
+        <p>Zoom out from one builder and see the shared tools, places, and interests connecting the whole network.</p>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </section>
+
+    <section class="network-shell" id="universeView">
+      <aside class="network-rail">
+        <div>
+          <span class="rail-index">02</span>
+          <p>BUILDER<br>UNIVERSE</p>
+        </div>
+        <span class="rail-line"></span>
+        <small>DRAG TO PAN<br>SCROLL TO ZOOM<br>CLICK TO DISCOVER</small>
+      </aside>
+      <div class="canvas-wrap" id="canvasWrap">
+        <canvas id="networkCanvas" aria-label="Interactive builder constellation"></canvas>
+        <div class="constellation-labels" id="clusterLabels" aria-hidden="true"></div>
+        <div class="canvas-top">
+          <div class="search-wrap">
+            <span>⌕</span>
+            <input id="search" type="search" placeholder="Find a builder, craft, or district..." autocomplete="off">
+            <kbd>/</kbd>
+          </div>
+          <div class="view-status"><i></i><span id="visibleCount">0</span> SIGNALS VISIBLE</div>
+        </div>
+        <div class="filter-row" id="filters"></div>
+        <div class="canvas-controls">
+          <button id="zoomIn" aria-label="Zoom in">+</button>
+          <button id="zoomOut" aria-label="Zoom out">−</button>
+          <button id="resetView" aria-label="Reset view">⌖</button>
+        </div>
+        <div class="coordinates" id="coordinates">10.8505° N / 76.2711° E</div>
+        <div class="node-tip" id="nodeTip"></div>
+      </div>
+      <aside class="signal-panel" id="signalPanel">
+        <div class="panel-id"><span>ACTIVE SIGNAL</span><b id="panelRank">#—</b></div>
+        <div class="avatar-orbit"><div id="panelInitials">KL</div><i></i><i></i></div>
+        <div class="panel-person">
+          <span id="panelLocation">KERALA / INDIA</span>
+          <h2 id="panelName">Choose a star</h2>
+          <p id="panelBio">Every point is a builder. Select one to inspect their work and connections.</p>
+          <div class="tag-list" id="panelTags"></div>
+        </div>
+        <div class="panel-score">
+          <div><small>BUILDER SCORE</small><strong id="panelScore">—</strong></div>
+          <div><small>BUILD STREAK</small><strong id="panelStreak">—</strong></div>
+        </div>
+        <div class="panel-actions">
+          <button id="openProfile">Open profile <span>↗</span></button>
+          <button id="randomBuilder" aria-label="Discover a random builder">Random signal</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section-block district-section" id="districtsView">
+      <div class="section-heading">
+        <div><span class="eyebrow">03 / GEOGRAPHY LAYER</span><h2>Kerala, wired.</h2></div>
+        <p>Fourteen districts. One builder network. Signal intensity reflects the builders currently connected from each place.</p>
+      </div>
+      <div class="district-layout">
+        <div class="kerala-map" id="keralaMap" aria-label="Interactive schematic map of Kerala"></div>
+        <div class="district-inspector">
+          <span class="eyebrow">DISTRICT SIGNAL</span>
+          <h3 id="districtName">Select a district</h3>
+          <p id="districtCopy">Trace the network from Kasaragod to Thiruvananthapuram.</p>
+          <div class="district-builders" id="districtBuilders"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block trails-section" id="trailsView">
+      <div class="section-heading">
+        <div><span class="eyebrow">04 / CURATED PATHS</span><h2>Don't browse. Follow a trail.</h2></div>
+        <p>Move through the network by shared craft, curiosity, and context. Each trail is a handrail into a different builder community.</p>
+      </div>
+      <div class="trail-grid" id="trailGrid"></div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-mark">ക</div>
+      <p>Not ranked by attention.<br><strong>Ranked by what you ship.</strong><br>Connected by what you build.</p>
+      <a href="https://github.com/KLDevRing/ring" target="_blank" rel="noreferrer">Explore the source ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span><b>KL</b> DEV-RING</span></div>
+    <p>Built in the open by Kerala's builder community.</p>
+    <div><a href="https://github.com/KLDevRing/ring">GitHub</a><a href="./widget.html">Widget</a><button id="replayIntro">Replay intro</button></div>
+  </footer>
+
+  <dialog class="profile-modal" id="profileModal">
+    <button class="modal-close" id="closeProfile" aria-label="Close profile">×</button>
+    <div id="profileContent"></div>
+  </dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

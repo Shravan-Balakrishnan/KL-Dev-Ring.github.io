@@ -1,0 +1,16 @@
+{
+  "handle": "sneha-babu",
+  "name": "Sneha Babu",
+  "github": "snehab",
+  "site": "https://example.com/sneha",
+  "city": "Wayanad",
+  "district": "Wayanad",
+  "country": "India",
+  "tags": ["student", "climate", "data", "python"],
+  "bio": "Mapping climate stories through open data and field research.",
+  "joined": "2026-05-18",
+  "projects": [
+    {"name": "Cloudline", "url": "https://example.com/sneha/cloudline", "description": "A visual atlas of local climate observations."}
+  ],
+  "stats": {"contributions": 144, "mergedPRs": 11, "projects": 4, "posts": 8, "streak": 11}
+}

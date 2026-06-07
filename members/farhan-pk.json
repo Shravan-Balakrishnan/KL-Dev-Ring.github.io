@@ -1,0 +1,16 @@
+{
+  "handle": "farhan-pk",
+  "name": "Farhan P. K.",
+  "github": "farhanpk",
+  "site": "https://example.com/farhan",
+  "city": "Kozhikode",
+  "district": "Kozhikode",
+  "country": "India",
+  "tags": ["webdev", "design-systems", "typescript", "opensource"],
+  "bio": "Shipping expressive interfaces and accessible design systems.",
+  "joined": "2025-12-03",
+  "projects": [
+    {"name": "Chaya UI", "url": "https://example.com/farhan/chaya", "description": "An accessible interface kit for the open web."}
+  ],
+  "stats": {"contributions": 612, "mergedPRs": 38, "projects": 8, "posts": 9, "streak": 19}
+}

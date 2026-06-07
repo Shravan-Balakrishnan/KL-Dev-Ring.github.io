@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{BIO}}">
+  <title>{{NAME}} — KL Dev-Ring</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="../../"><span><b>KL</b> DEV-RING</span></a>
+    <span class="eyebrow">BUILDER / {{HANDLE}}</span>
+    <a class="join-button" href="../../"><span>Back to universe</span><i>←</i></a>
+  </header>
+  <main id="standaloneProfile" style="min-height:calc(100vh - 185px);display:grid;place-items:center;padding:40px 20px"></main>
+  <footer><div class="brand"><span><b>KL</b> DEV-RING</span></div><p>Ranked by what you ship. Connected by what you build.</p><div><a href="../../">Universe</a></div></footer>
+  <script type="module">
+    const handle = "{{HANDLE}}";
+    const data = await fetch("../../data/network.json").then(r => r.json());
+    const node = data.nodes.find(item => item.handle === handle);
+    const initials = node.name.split(/\s+/).map(p => p[0]).slice(0, 2).join("");
+    document.querySelector("#standaloneProfile").innerHTML = `
+      <div class="profile-modal" style="display:block;position:relative;width:min(900px,100%);max-height:none">
+        <div class="profile-sheet">
+          <aside class="passport"><span class="eyebrow">KERALA BUILDER PASSPORT</span><div class="passport-avatar">${initials}</div>
+            <h2>${node.name}</h2><p>${node.district}<br>${node.country}</p>
+            <div class="passport-code"><div><span>RING ID</span><b>KL-${String(node.rank).padStart(4,"0")}</b></div><div><span>JOINED</span><b>${node.joined}</b></div><div><span>BUILDER SCORE</span><b>${node.score}</b></div><div><span>NETWORK RANK</span><b>#${node.rank}</b></div><div><span>STREAK</span><b>${node.stats?.streak || 0} WEEKS</b></div></div>
+          </aside>
+          <article class="profile-main"><span class="eyebrow">ACTIVE BUILDER / ${node.handle.toUpperCase()}</span><h1>${node.name}</h1><p>${node.bio}</p>
+            <div class="badge-row">${node.badges.map(b => `<span class="badge">${b.icon} ${b.label}</span>`).join("")}</div>
+            <span class="eyebrow">SHIPPED WORK</span><div class="project-list">${(node.projects || []).map(p => `<a class="project" href="${p.url}"><b>${p.name}</b><span>↗</span><p>${p.description}</p></a>`).join("")}</div>
+            <div class="profile-links"><a href="${node.site}">Personal site ↗</a><a href="https://github.com/${node.github}">GitHub ↗</a></div>
+          </article>
+        </div>
+      </div>`;
+  </script>
+</body>
+</html>

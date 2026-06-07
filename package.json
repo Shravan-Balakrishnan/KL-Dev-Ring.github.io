@@ -1,0 +1,17 @@
+{
+  "name": "kl-dev-ring",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kerala's open-source builder network.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js",
+    "validate": "node scripts/validate.js",
+    "test": "node --test tests/*.test.js",
+    "check": "npm run validate && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

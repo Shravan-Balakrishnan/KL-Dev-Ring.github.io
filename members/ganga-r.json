@@ -1,0 +1,16 @@
+{
+  "handle": "ganga-r",
+  "name": "Ganga R.",
+  "github": "gangar",
+  "site": "https://example.com/ganga",
+  "city": "Thrissur",
+  "district": "Thrissur",
+  "country": "India",
+  "tags": ["student", "robotics", "embedded", "c"],
+  "bio": "Student builder making small robots with large ambitions.",
+  "joined": "2026-04-21",
+  "projects": [
+    {"name": "Kuruvi", "url": "https://example.com/ganga/kuruvi", "description": "An open classroom robotics platform."}
+  ],
+  "stats": {"contributions": 221, "mergedPRs": 17, "projects": 6, "posts": 4, "streak": 16}
+}

@@ -1,0 +1,16 @@
+{
+  "handle": "vishnu-k",
+  "name": "Vishnu K.",
+  "github": "vishnuk",
+  "site": "https://example.com/vishnu",
+  "city": "London",
+  "district": "Pathanamthitta",
+  "country": "United Kingdom",
+  "tags": ["diaspora", "cloud", "systems", "go"],
+  "bio": "Building dependable cloud systems from London, via Pathanamthitta.",
+  "joined": "2025-11-25",
+  "projects": [
+    {"name": "Relay", "url": "https://example.com/vishnu/relay", "description": "Small tools for reliable distributed systems."}
+  ],
+  "stats": {"contributions": 772, "mergedPRs": 51, "projects": 10, "posts": 11, "streak": 39}
+}

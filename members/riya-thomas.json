@@ -1,0 +1,16 @@
+{
+  "handle": "riya-thomas",
+  "name": "Riya Thomas",
+  "github": "riyathomas",
+  "site": "https://example.com/riya",
+  "city": "Singapore",
+  "district": "Kottayam",
+  "country": "Singapore",
+  "tags": ["diaspora", "ai", "product", "writer"],
+  "bio": "Building thoughtful AI products and writing down the hard parts.",
+  "joined": "2026-01-27",
+  "projects": [
+    {"name": "Margin", "url": "https://example.com/riya/margin", "description": "Essays and prototypes about humane AI."}
+  ],
+  "stats": {"contributions": 328, "mergedPRs": 21, "projects": 6, "posts": 26, "streak": 18}
+}

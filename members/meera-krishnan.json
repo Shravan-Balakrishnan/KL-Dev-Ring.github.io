@@ -1,0 +1,16 @@
+{
+  "handle": "meera-krishnan",
+  "name": "Meera Krishnan",
+  "github": "meerak",
+  "site": "https://example.com/meera",
+  "city": "Dubai",
+  "district": "Malappuram",
+  "country": "UAE",
+  "tags": ["diaspora", "founder", "fintech", "typescript"],
+  "bio": "Founder building financial tools between Kerala and the Gulf.",
+  "joined": "2025-12-19",
+  "projects": [
+    {"name": "Current", "url": "https://example.com/meera/current", "description": "Cross-border finance primitives for small teams."}
+  ],
+  "stats": {"contributions": 377, "mergedPRs": 24, "projects": 10, "posts": 13, "streak": 21}
+}

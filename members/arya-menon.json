@@ -1,0 +1,17 @@
+{
+  "handle": "arya-menon",
+  "name": "Arya Menon",
+  "github": "aryamenon",
+  "site": "https://example.com/arya",
+  "city": "Thiruvananthapuram",
+  "district": "Thiruvananthapuram",
+  "country": "India",
+  "tags": ["ai", "machine-learning", "research", "python"],
+  "bio": "Researching useful machine intelligence for public systems.",
+  "joined": "2026-01-08",
+  "projects": [
+    {"name": "Nila", "url": "https://example.com/arya/nila", "description": "Malayalam language model evaluation tools."},
+    {"name": "Field Notes", "url": "https://example.com/arya/notes", "description": "Practical ML research notes."}
+  ],
+  "stats": {"contributions": 488, "mergedPRs": 29, "projects": 7, "posts": 18, "streak": 24}
+}

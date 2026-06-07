@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KL Dev-Ring Widget</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:transparent;color:#e8eadf;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.widget{width:min(440px,calc(100vw - 16px));padding:2px;background:linear-gradient(120deg,#ffb31a,#25352e,#ffb31a);box-shadow:0 20px 60px rgba(0,0,0,.4)}.inner{padding:18px;background:#090c0b;position:relative;overflow:hidden}.inner:after{content:"KL";position:absolute;right:-14px;bottom:-25px;color:rgba(255,179,26,.05);font-size:100px;font-weight:700}.top,.person,.nav{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:1}.top{font-size:9px;letter-spacing:.14em;color:#8b9289}.live{color:#7ad8a6}.person{margin:19px 0}.person h1{margin:0;font:500 19px system-ui}.person span{font-size:9px;color:#ffb31a}.score{display:flex;gap:20px;font-size:8px;color:#8b9289}.score b{display:block;color:#e8eadf;font-size:14px;margin-top:4px}.nav{border-top:1px solid rgba(255,255,255,.12);padding-top:13px}.nav a{color:#8b9289;text-decoration:none;font-size:9px;text-transform:uppercase;letter-spacing:.1em}.nav a:hover{color:#ffb31a}
+  </style>
+</head>
+<body>
+  <div class="widget"><div class="inner">
+    <div class="top"><span>KL DEV-RING / BUILDER SIGNAL</span><span class="live">● LIVE</span></div>
+    <div class="person"><div><span id="rank">RANK #—</span><h1 id="name">Loading signal...</h1></div><div class="score"><div>SCORE<b id="score">—</b></div><div>STREAK<b id="streak">—</b></div></div></div>
+    <div class="nav"><a id="prev" href="#">← Previous</a><a id="home" href="./" target="_top">Open ring</a><a id="random" href="#">Random ◇</a><a id="next" href="#">Next →</a></div>
+  </div></div>
+  <script type="module">
+    const data = await fetch("./data/network.json").then(r => r.json());
+    const params = new URLSearchParams(location.search);
+    let index = Math.max(0, data.nodes.findIndex(n => n.handle === params.get("member")));
+    function show(i) {
+      index = (i + data.nodes.length) % data.nodes.length;
+      const n = data.nodes[index];
+      document.querySelector("#rank").textContent = `RANK #${n.rank}`;
+      document.querySelector("#name").textContent = n.name;
+      document.querySelector("#score").textContent = n.score;
+      document.querySelector("#streak").textContent = `${n.stats?.streak || 0}W`;
+      document.querySelector("#home").href = `./builders/${n.handle}/`;
+    }
+    document.querySelector("#prev").onclick = e => { e.preventDefault(); show(index - 1); };
+    document.querySelector("#next").onclick = e => { e.preventDefault(); show(index + 1); };
+    document.querySelector("#random").onclick = e => { e.preventDefault(); show(Math.floor(Math.random() * data.nodes.length)); };
+    show(index);
+  </script>
+</body>
+</html>

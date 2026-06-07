@@ -1,0 +1,17 @@
+{
+  "handle": "anand-s",
+  "name": "Anand S",
+  "github": "anandsuresh",
+  "site": "https://example.com/anand",
+  "city": "Kochi",
+  "district": "Ernakulam",
+  "country": "India",
+  "tags": ["systems", "rust", "opensource", "developer-tools"],
+  "bio": "Building fast systems and calmer developer tools.",
+  "joined": "2025-11-14",
+  "projects": [
+    {"name": "Harbor", "url": "https://github.com/anandsuresh/harbor", "description": "A tiny service runtime for edge projects."},
+    {"name": "Patchwork", "url": "https://example.com/anand/patchwork", "description": "Notes on maintaining open systems."}
+  ],
+  "stats": {"contributions": 734, "mergedPRs": 42, "projects": 9, "posts": 12, "streak": 31}
+}

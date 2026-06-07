@@ -1,0 +1,16 @@
+{
+  "handle": "sachin-v",
+  "name": "Sachin V.",
+  "github": "sachinv",
+  "site": "https://example.com/sachin",
+  "city": "Kollam",
+  "district": "Kollam",
+  "country": "India",
+  "tags": ["hardware", "iot", "embedded", "opensource"],
+  "bio": "Prototyping open hardware for coastal communities.",
+  "joined": "2025-09-28",
+  "projects": [
+    {"name": "Tidebox", "url": "https://example.com/sachin/tidebox", "description": "Low-cost coastal sensing hardware."}
+  ],
+  "stats": {"contributions": 681, "mergedPRs": 48, "projects": 14, "posts": 6, "streak": 37}
+}

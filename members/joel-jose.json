@@ -1,0 +1,16 @@
+{
+  "handle": "joel-jose",
+  "name": "Joel Jose",
+  "github": "joeljose",
+  "site": "https://example.com/joel",
+  "city": "Kannur",
+  "district": "Kannur",
+  "country": "India",
+  "tags": ["security", "linux", "systems", "opensource"],
+  "bio": "Breaking assumptions and building safer infrastructure.",
+  "joined": "2025-10-17",
+  "projects": [
+    {"name": "Watchtower", "url": "https://example.com/joel/watchtower", "description": "Security observability for home labs."}
+  ],
+  "stats": {"contributions": 901, "mergedPRs": 55, "projects": 11, "posts": 7, "streak": 44}
+}
