@@ -1,19 +1,24 @@
 {
-  "handle": "karthik-unni",
-  "name": "Karthik Unni",
-  "github": "Karthik-Unni",
-  "site": "https://karthik-unni.github.io",
-  "city": "Kannur",
-  "district": "Kannur",
-  "country": "India",
-  "tags": ["ai", "machine-learning", "opensource", "webdev", "fullstack", "dsa"],
-  "bio": "Computer Science student, AI enthusiast, and open-source builder from Kerala. I build machine learning systems, developer tools, and full-stack applications. Creator of Loom-GPT, a lightweight framework for training and experimenting with GPT-style language models, and founder of KL Dev-Ring, Kerala's builder network.",
-  "joined": "2026-06-08",
-  "projects": [
-    {
-      "name": "Loom-GPT",
-      "url": "https://github.com/Karthik-Unni/Loom-gpt",
-      "description": "An open-source framework for training, fine-tuning, and experimenting with GPT-style language models on custom datasets. Designed to make language model development accessible for students, researchers, and AI builders."
-    }
-  ]
+"handle": "karthik-unni",
+"name": "Karthik Unni",
+"github": "Karthik-Unni",
+"site": "https://karthik-unni.github.io",
+"city": "Kannur",
+"district": "Kannur",
+"country": "India",
+"tags": ["ai", "machine-learning", "opensource", "fullstack", "webdev"],
+"bio": "AI builder, open-source developer, and Computer Science student from Kerala. Creator of Loom-GPT and founder of KL Dev-Ring. Passionate about machine learning, developer tools, and building impactful software.",
+"joined": "2026-06-08",
+"projects": [
+{
+"name": "Loom-GPT",
+"url": "https://github.com/Karthik-Unni/Loom-gpt",
+"description": "An open-source framework for training and experimenting with GPT-style language models on custom datasets."
+},
+{
+"name": "KL Dev-Ring",
+"url": "https://github.com/KLWebRing/KL-Dev-Ring.github.io",
+"description": "A community-driven network connecting developers, researchers, founders, and open-source contributors across Kerala."
+}
+]
 }
